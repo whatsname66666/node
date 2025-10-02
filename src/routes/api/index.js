@@ -1,12 +1,14 @@
 import express from 'express';
 import userRoutes from './users.js';
 import authRoutes from './auth.js';
+import exampleRoutes from './example.js';
 
 const router = express.Router();
 
 // API 路由配置
 router.use('/users', userRoutes);
 router.use('/auth', authRoutes);
+router.use('/example', exampleRoutes);
 
 // API 根路径
 router.get('/', (req, res) => {
